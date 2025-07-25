@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            scroll-behavior: smooth;
+        }
+        .main {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #ff8c00;
+            position: fixed;
+            width: 95%;
+            top: 0;
+            z-index: 1030;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: gold;
+        }
+
+        .navbar {
+            display: flex;
+        }
+
+        .navbar .list1 {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .navbar .list1 li {
+            margin: 20px;
+        }
+
+        .home img {
+            border-radius: 20px;
+            height: 300px;
+            width: 300px;
+        }
+
+        .home {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            padding: 10rem 2rem;
+
+        }
+
+        .about {
+            background-color: #ff8c00;
+            text-align: center;
+            padding: 6rem 2rem;
+            color: whitesmoke;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: 1rem auto;
+            line-height: 1.6;
+        }
+
+        .projects {
+            padding: 8rem 2rem;
+            background-color: rgb(226, 222, 222);
+        }
+
+        .projects h1 {
+            color: orange;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .myprojects {
+            display: flex;
+            justify-content: center;
+        }
+
+        .projects .div1 {
+            width: 25%;
+            padding: 10px;
+            background-color: white;
+            border-radius: 15px;
+            margin: auto;
+            border-color: orangered;
+            border-style: solid;
+            transition: transform 0.3s;
+
+        }
+
+        .projects .div1:hover {
+            transform: translateY(-10px);
+        }
+
+        .projects .div1 img {
+            height: 60%;
+            width: 100%;
+            border-radius: 30px;
+            margin: auto;
+        }
+
+        .skills {
+            padding: 8rem 2rem;
+        }
+
+        .skills h1 {
+            color: orange;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .skills .sk {
+            display: flex;
+
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .skills .sk .sk1 {
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgb(255, 77, 0);
+        }
+
+        .skills .sk .sk1 h2 {
+            color: white;
+        }
+
+        .contact {
+            background-color: rgb(226, 222, 222);
+            height: 350px;
+            text-align: center;
+            padding: 8rem 2rem;
+            margin: 20px;
+            border-radius: 10px;
+            border-color: orange;
+            border-style: ridge;
+
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .contact h1 {
+            color: orange;
+        }
+
+        .contact input,
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            border-color: orangered;
+
+        }
+
+        .contact .button {
+            color: whitesmoke;
+            background-color:  #ff8c00;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact .button:hover {
+            background-color: orangered;
+        }
+
+        .links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .links a {
+            margin-left: 20px;
+            color: orange;
+            font-weight: bolder;
+            font-size: x-large;
+        }
+
+        .links a:hover {
+            color: black;
+        }
+
+        .footer {
+            width: 100%;
+            background-color: rgb(238, 92, 44);
+            text-align: center;
+            padding: 20px;
+            margin: 10px 10px;
+
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: whitesmoke;
+        }
+
+        .footer a:hover {
+            color: black;
+        }
+
+        .whatsapp {
+            background-color: rgba(144, 238, 144, 0);
+            position: fixed;
+            bottom: 40px;
+            right: 70px;
+            font-size: x-large;
+        }
+
+        .whatsapp a {
+            color: green;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <h3><a href="">My Portfolio</a></h3>
+            <ul class="list1">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#my_projects">Projects</a></li>
+                <li><a href="#my_skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+        </div>
+        </ul>
+        <div id="home" class="home">
+            <img src="images/cool.jpg" alt="images/cool.jpg">
+            <div class="me">
+                <h1>Hi,<br> I am Billjoy Mbaluka</h1>
+                <p>A Front-end developer Passionate about clean design, responsive layouts, and user experience</p>
+            </div>
+        </div>
+        <div id="about" class="about">
+            <h1>About Me</h1>
+            <p>I am a self-taught deloper with experience in HTML, CSS,Javascript and Modern Frameworks like React.
+                I enjoy turning complex problems into simple beautiful, and institutive designs.When I am not
+                coding, you will find me sketching or reading tech blogs</p>
+        </div>
+        <div id="my_projects" class="projects">
+            <h1>My Projects</h1>
+            <div class="myprojects">
+                <div class="div1">
+                    <img src="images/nft1.png" alt="">
+                    <h2>Portfolio Website</h2>
+                    <p>A personal Website built with HTML, CSS, and JavaScript to showcase my skills and Projects.</p>
+                </div><br>
+                <div class="div1">
+                    <img src="images/nft2.png" alt="">
+                    <h2>Task Manager</h2>
+                    <p>A To-do list app Built using Reactand Localstorage to manage Daily tasks</p>
+                </div><br>
+                <div class="div1">
+                    <img src="images/nft3.jpeg" alt="">
+                    <h2>Blog Template</h2>
+                    <p>A clean and Responsive Blog layout using Flexbox and CSS Grid</p>
+                </div>
+            </div>
+
+        </div>
+        <div id="my_skills" class="skills">
+            <h1>My Skills</h1>
+            <div class="sk">
+                <div class="sk1">
+                    <h2>HTML & CSS</h2>
+                    <p>Semantic markup, responsive design, layout with Flexbox and Grid.</p>
+                </div><br>
+                <div class="sk1">
+                    <h2>JavaScript</h2>
+                    <p>DOM manipulation,ES6+,APIs, and dynamic inteferance</p>
+                </div><br>
+                <div class="sk1">
+                    <h2>React</h2>
+                    <p>Component-based UI,props & stake,hooks and routing.</p>
+                </div>
+            </div>
+        </div>
+        <div id="contact" class="contact">
+            <h1>Contact Me</h1>
+            <form action="https://api.web3forms.com/submit" method="POST" class="form">
+                <input type="hidden" name="access_key" value="a7d56b32-cd5b-40f6-92bc-1a445cf4e868">
+                <input type="text" name="name" id="name"  placeholder="Your Name" required><br>
+                <input type="email" name="email" id="email" placeholder="Your Email" required><br>
+                <textarea rows="4" name="message" id="message" placeholder="Your Message"required></textarea><br>
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <input class="button" type="submit" name="send" id="send" value="Send">
+            </form>
+        </div>
+        <div class="links">
+            <a href="https://web.facebook.com/reel/1473846837119943"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
+            <a href="https://x.com/home"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
+            <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in fa-lg"></i></a>
+            <a href="https://github.com/"><i class="fa-brands fa-github fa-lg"></i></a>
+        </div>
+        <div class="footer">
+            <p><a href=""> @ 2025 Jane Doe. All rights reserved</a></p>
+        </div>
+        <div class="whatsapp">
+            <a href="https://wa.me/254719113487"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+        </div>
+    </div>
+</body>
+
+</html>
